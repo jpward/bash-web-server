@@ -84,7 +84,7 @@ else
   sudo mknod -m 777 ${FIFO} p
   RUN=true
   while $RUN; do
-    cat fifo | nc -l -p ${PORT} | ${HERE}/${THIS_SCRIPT} pipe > ${FIFO}
+    cat ${FIFO} | nc -l -p ${PORT} | ${HERE}/${THIS_SCRIPT} pipe > ${FIFO}
   done
 fi
 
