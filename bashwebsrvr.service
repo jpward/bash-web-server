@@ -1,0 +1,11 @@
+[Unit]
+Description=Bash Web Server Service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/home/ubuntu/bash-web-server/bashSrvr.sh
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
